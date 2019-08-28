@@ -15,19 +15,19 @@ ln -s $etc/docker-compose.bash-completion $(brew --prefix)/etc/bash_completion.d
 Add the following to your ~/.bash_profile:
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
-# 3. Docker desktop for mac
+#3. Docker desktop for mac
 https://hub.docker.com/editions/community/docker-ce-desktop-mac
 
-# 4. Github desktop Mac:
+#4. Github desktop Mac:
 https://desktop.github.com/
 
-# 5. ITerm2 terminal Mac:
+#5. ITerm2 terminal Mac:
 https://www.iterm2.com/
 
 #6. VsCode for development:
 https://code.visualstudio.com/
 
-# 7. Clone code:
+#7. Clone code:
 https://github.com/BretFisher/udemy-docker-mastery
 
 #8. Docker for mac troubleshoot:
