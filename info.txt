@@ -101,4 +101,23 @@ Heart of the SwarmKit: Topology Management
 https://speakerdeck.com/aluzzardi/heart-of-the-swarmkit-topology-management
 Heart of the SwarmKit: Store, Topology & Object Model
 https://www.youtube.com/watch?v=EmePhjGnCXY
+Raft Consensus Visualization (Our Swarm DB and how it stays in sync across nodes)
+http://thesecretlivesofdata.com/raft/
+
+#29. Deploy services to a swarm
+https://docs.docker.com/engine/swarm/services/
+
+#30. How to Add SSH Keys to Droplets
+https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/
+
+#31. Docker Swarm Firewall Ports
+https://www.bretfisher.com/docker-swarm-firewall-ports/
+
+#32. How To Configure Custom Connection Options for your SSH Client
+https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client
+
+#33. Microsoft Hyper-V
+https://docs.docker.com/machine/drivers/hyper-v/
+
+
 
