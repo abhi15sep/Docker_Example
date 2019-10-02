@@ -119,5 +119,15 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connect
 #33. Microsoft Hyper-V
 https://docs.docker.com/machine/drivers/hyper-v/
 
+#34. Swarm mode routing mesh
+https://docs.docker.com/engine/swarm/ingress/
 
+#35 Features not supported docker stack Deploy
+https://docs.docker.com/compose/compose-file/#not-supported-for-docker-stack-deploy
+https://github.com/BretFisher/ama/issues/8
 
+#36 Manage sensitive data with docker
+https://docs.docker.com/engine/swarm/secrets/
+
+#37 Secrets in compose files
+https://docs.docker.com/compose/compose-file/#secrets-configuration-reference

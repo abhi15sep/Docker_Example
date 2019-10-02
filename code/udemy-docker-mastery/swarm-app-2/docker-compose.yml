@@ -1,14 +1,15 @@
 # If taking Docker Mastery, this is the same file you created in 
 # ./compose-assignment-2
 # If taking Swarm Mastery, this is your starting point for adding secrets :)
+# echo "wrv467sd,a" | docker secret create psql-pw -
+# docker stack deploy -c docker-compose.yaml drupal
 # reminder, this needs to change to 3.1 version to use secrets!
-version: '2'
+version: '3.1'
 
 services:
 
   drupal:
-    image: custom-drupal
-    build: .
+    image: drupal:8.2
     ports:
       - "8080:80"
     volumes:
@@ -20,7 +21,9 @@ services:
   postgres:
     image: postgres:9.6
     environment:
-      - POSTGRES_PASSWORD=mypasswd
+      - POSTGRES_PASSWORD_FILE=/run/secrets/psql-pw
+    secrets:
+      - psql-pw
     volumes:
       - drupal-data:/var/lib/postgresql/data
 
@@ -30,3 +33,7 @@ volumes:
   drupal-profiles:
   drupal-sites:
   drupal-themes:
+
+secrets:
+  psql-pw:
+    external: true
