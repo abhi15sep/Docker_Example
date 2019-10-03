@@ -131,3 +131,27 @@ https://docs.docker.com/engine/swarm/secrets/
 
 #37 Secrets in compose files
 https://docs.docker.com/compose/compose-file/#secrets-configuration-reference
+
+#38 Using multiple compose files
+https://docs.docker.com/compose/extends/#multiple-compose-files
+
+#39 Using Compose files in production
+https://docs.docker.com/compose/production/
+
+#40 Docker service update
+https://docs.docker.com/engine/reference/commandline/service_update/
+
+#41 Health check in docker
+https://github.com/BretFisher/php-docker-good-defaults
+https://docs.docker.com/engine/reference/builder/#healthcheck
+https://docs.docker.com/compose/compose-file/#healthcheck
+
+#Tools/Project
+https://github.com/cncf/landscape
+
+#Future of Docker Swarm in 2018 on Built-in Container Orchestration
+https://www.bretfisher.com/the-future-of-docker-swarm/
+
+#Everything You Thought You Already Knew About Orchestration
+https://www.youtube.com/watch?v=Qsv-q8WbIZY
+
