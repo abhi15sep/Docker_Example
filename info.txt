@@ -155,3 +155,5 @@ https://www.bretfisher.com/the-future-of-docker-swarm/
 #Everything You Thought You Already Knew About Orchestration
 https://www.youtube.com/watch?v=Qsv-q8WbIZY
 
+NOTE: Some examples:
+https://www.bretfisher.com/docker/
