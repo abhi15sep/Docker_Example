@@ -157,3 +157,13 @@ https://www.youtube.com/watch?v=Qsv-q8WbIZY
 
 NOTE: Some examples:
 https://www.bretfisher.com/docker/
+
+# npx Create React App Generation
+This is now the recommended way to generate an app with Create React App.
+Instead of this:
+npm install -g create-react-app
+create-react-app client 
+Just do this:
+npx create-react-app client
+Official docs on CRA usage with npx are available here:
+https://create-react-app.dev/docs/getting-started#quick-start
