@@ -1,0 +1,6 @@
+1. https://kubernetes.io/
+
+2. kubernetes partners
+https://kubernetes.io/partners/#conformance
+
+3. 

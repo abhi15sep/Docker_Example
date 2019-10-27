@@ -1,0 +1,90 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: consul
+  labels:
+    app: consul
+rules:
+  - apiGroups: [""]
+    resources:
+      - pods
+    verbs:
+      - get
+      - list
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: consul
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: consul
+subjects:
+  - kind: ServiceAccount
+    name: consul
+    namespace: default
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: consul
+  labels:
+    app: consul
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: consul
+spec:
+  ports:
+  - port: 8500
+    name: http
+  selector:
+    app: consul
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: consul
+spec:
+  serviceName: consul
+  replicas: 3
+  selector:
+    matchLabels:
+      app: consul
+  template:
+    metadata:
+      labels:
+        app: consul
+    spec:
+      serviceAccountName: consul
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - consul
+              topologyKey: kubernetes.io/hostname
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: consul
+          image: "consul:1.5"
+          args:
+            - "agent"
+            - "-bootstrap-expect=3"
+            - "-retry-join=provider=k8s label_selector=\"app=consul\""
+            - "-client=0.0.0.0"
+            - "-data-dir=/consul/data"
+            - "-server"
+            - "-ui"
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                - /bin/sh
+                - -c
+                - consul leave
