@@ -74,3 +74,25 @@ curl httpenv:8888 (Fow wwindows & MAC)
 For Linux machine
 microk8s.kubectl get service
 curl [Ip of service]:8888
+
+20. NodePort (docs)
+https://kubernetes.io/docs/concepts/services-networking/service/#nodeport
+
+21. kubernetes DNS Specification
+https://github.com/kubernetes/dns/blob/master/docs/specification.md
+
+22. Core DNS for kubernetes
+https://www.coredns.io/plugins/kubernetes/
+
+23. Lets expose a NodePort, so we can access it via host ip. (including localhost on win/Linux/MAC)
+kubectl expose deployment/httpenv --port 8888 --name httpenv-np --type NodePort
+curl localhost:31597
+kubectl expose deployment/httpenv --port 8888 --name httpenv-lb --type LoadBalancer
+curl localhost:8888
+kubectl get services
+To Clean-up everything
+kubectl delete service/httpenv service/httpenv-np
+kubectl delete service/httpenv-lb deployment/httpenv
+
+24. To list all namespaces
+kubectl get namespaces
