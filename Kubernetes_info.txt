@@ -47,7 +47,6 @@ microk8s.kubectl describe pod/my-apache-5d589d69c7-6jjpt
 microk8s.kubectl get pods -w
 microk8s.kubectl delete pod/my-apache-5d589d69c7-6jjpt
 
-
 13. kubectl cheat-sheet
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
@@ -56,3 +55,22 @@ https://kubernetes.io/docs/reference/kubectl/docker-cli-to-kubectl/
 
 15. Stern: For better multi-node log view.
 https://github.com/wercker/stern
+
+16. Servive (docs)
+https://kubernetes.io/docs/concepts/services-networking/service/
+
+17. Service Types
+https://kubernetes.io/docs/tutorials/services/
+
+18. Using Services
+https://kubernetes.io/docs/tutorials/kubernetes-basics/expose/expose-intro/
+
+19. Create service
+microk8s.kubectl create deployment httpenv --image=bretfisher/httpenv
+microk8s.kubectl scale deployment/httpenv --replicas=5
+microk8s.kubectl expose deployment/httpenv --port 8888
+microk8s.kubectl run --generator run-pod/v1 tmp-shell --rm -it --image bretfisher/netshoot -- bash
+curl httpenv:8888 (Fow wwindows & MAC)
+For Linux machine
+microk8s.kubectl get service
+curl [Ip of service]:8888
