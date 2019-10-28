@@ -20,3 +20,39 @@ https://www.katacoda.com/courses/kubernetes/playground
 
 8. Play-with-K8s in browser
 https://play-with-k8s.com/
+
+9. Pod overview
+https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/
+
+10. Service (docs)
+https://kubernetes.io/docs/concepts/services-networking/service/
+
+11. Namespace (docs)
+https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+
+12. Some Sample Commands:
+microk8s.kubectl version
+microk8s.kubectl run mynginx --image nginx
+microk8s.kubectl get pods
+microk8s.kubectl get all
+microk8s.kubectl delete deployment mynginx
+microk8s.kubectl run my-apache --image httpd
+microk8s.kubectl scale deploy/my-apache --replicas 2
+microk8s.kubectl logs deploy/my-apache --follow --tail 1
+microk8s.kubectl logs -l run=my-apache
+
+microk8s.kubectl get pods
+microk8s.kubectl describe pod/my-apache-5d589d69c7-6jjpt
+
+microk8s.kubectl get pods -w
+microk8s.kubectl delete pod/my-apache-5d589d69c7-6jjpt
+
+
+13. kubectl cheat-sheet
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+14. kubectl for docker users
+https://kubernetes.io/docs/reference/kubectl/docker-cli-to-kubectl/
+
+15. Stern: For better multi-node log view.
+https://github.com/wercker/stern
