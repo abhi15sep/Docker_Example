@@ -188,3 +188,44 @@ Use Label and Selectors to control which pods go to which node.
 Taints and Tolerations also control node placement.
 
 microk8s.kubectl delete <Resource Type>/<Resource Name> 
+
+47. Storage in kubernetes
+Volumes
+    https://kubernetes.io/docs/concepts/storage/volumes/
+StatefulSets
+    https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+Persistent Volume
+    https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+
+48. Ingress
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+Ingress Controllers
+https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
+Set up Ingress on Minikube with the NGINX Ingress Controller
+https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
+Traefik Ingress
+https://docs.traefik.io/v2.0/providers/kubernetes-crd/#traefik-ingressroute-definition
+
+49. CRD's and Operator pattern 
+Custom Resources
+https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/
+Operator pattern
+https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
+OperatorHub
+https://operatorhub.io/
+Awesome Operator list
+https://github.com/operator-framework/awesome-operators
+
+50. Higher deployment Abstractions
+ Kubernetes application management tools
+ https://docs.google.com/spreadsheets/d/1FCgqz1Ci7_VCz_wdh8vBitZ3giBtac_H8SBw4uxnrsE/edit#gid=0
+ Deploying Compose on Kubernetes
+ https://github.com/docker/compose-on-kubernetes/tree/master/docs
+ Introducing kustomize
+ https://kubernetes.io/blog/2018/05/29/introducing-kustomize-template-free-configuration-customization-for-kubernetes/
+ kustomize
+ https://github.com/kubernetes-sigs/kustomize
+ Docker app
+ https://github.com/docker/app
+ cnab spec
+ https://cnab.io/
