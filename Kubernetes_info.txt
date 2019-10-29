@@ -229,3 +229,19 @@ https://github.com/operator-framework/awesome-operators
  https://github.com/docker/app
  cnab spec
  https://cnab.io/
+
+51. Kubernetes Dashboard
+https://github.com/kubernetes/dashboard
+
+52. Namespaces and Context
+Configure Access to Multiple Clusters
+https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
+Namespaces
+https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+
+microk8s.kubectl get namespaces
+microk8s.kubectl get all --all-namespaces
+microk8s.kubectl config get-contexts
+
+53. Future of Kubernetes
+https://kubernetes.io/docs/setup/release/notes/
