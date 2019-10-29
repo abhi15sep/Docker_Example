@@ -152,3 +152,27 @@ kubectl explain services --recursive
 kubectl explain services.spec
 kubectl explain services.spec.type
 kubectl explain deployment.spec.template.spec.volumes.nfs.server
+
+38. APIServer dry-run and kubectl diff
+https://kubernetes.io/blog/2019/01/14/apiserver-dry-run-and-kubectl-diff/
+
+39. Server side dry-run command
+kubectl apply -f app.yaml --dry-run
+microk8s.kubectl apply -f app.yml
+microk8s.kubectl apply -f app.yml --server-dry-run
+microk8s.kubectl diff -f app.yml
+
+40. Label Selectors
+https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
+
+41. Difference between Label and Annotations
+https://vsupalov.com/kubernetes-labels-annotations-difference/
+
+42. Recommended Labels
+https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/
+
+43. Assigning Pods to Nodes
+https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+
+44. Taints and Tolerations
+https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
