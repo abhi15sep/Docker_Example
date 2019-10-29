@@ -176,3 +176,15 @@ https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 
 44. Taints and Tolerations
 https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+
+45. Use of Labels
+kubectl get pods -l app=nginx
+kubectl apply -f myfile.yml -l app=nginx
+
+46. Label Selectors 
+The glue telling Services and Deployments which pods are theirs.
+Many resources use Label Selectors to "link" resource dependencies.
+Use Label and Selectors to control which pods go to which node.
+Taints and Tolerations also control node placement.
+
+microk8s.kubectl delete <Resource Type>/<Resource Name> 
