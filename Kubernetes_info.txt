@@ -138,4 +138,17 @@ curl -L https://bret.run/prod
 33. Understanding kubernetes object
 https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/
 
-34.
+34. To get all Kind available in yaml file use:
+microk8s.kubectl api-resources
+
+35. To get the apiVersions the cluster supports
+microk8s.kubectl api-versions
+
+36. kubernetes API reference
+https://kubernetes.io/docs/reference/#api-reference
+
+37. To get all the keys each kind supports
+kubectl explain services --recursive
+kubectl explain services.spec
+kubectl explain services.spec.type
+kubectl explain deployment.spec.template.spec.volumes.nfs.server
