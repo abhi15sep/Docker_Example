@@ -113,3 +113,29 @@ kubectl run test --image nginx --port 80 --expose --dry-run
 kubectl run test --image nginx --port 80 --restart OnFailure --dry-run
 kubectl run test --image nginx --port 80 --restart Never --dry-run
 kubectl run test --image nginx --port 80 --schedule "*/1 * * * *" --dry-run
+
+28. kubernetes management techniques
+https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/
+
+29. Imperative command examples
+https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/
+
+30. Imperative config files
+https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/
+
+31. Declarative config files
+https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/
+
+32. Using KubeCtl apply
+> Create update resources in a files
+kubectl apply -f myfile.yaml
+> Create/update a whole directory of yaml
+kubectl apply -f myyaml/
+> Create/Update from a URL
+kubectl apply -f https://bret.run/prod.yaml
+curl -L https://bret.run/prod
+
+33. Understanding kubernetes object
+https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/
+
+34.
