@@ -96,3 +96,20 @@ kubectl delete service/httpenv-lb deployment/httpenv
 
 24. To list all namespaces
 kubectl get namespaces
+
+25. kubectl Usage Conventions
+https://kubernetes.io/docs/reference/kubectl/conventions/
+
+26. Generator examples
+microk8s.kubectl create deployment test --image nginx --dry-run -o yaml
+microk8s.kubectl create job test --image nginx --dry-run -o yaml
+microk8s.kubectl create deployment test --image nginx
+microk8s.kubectl expose deployment/test --port 80 --dry-run -o yaml
+microk8s.kubectl delete deployment test
+
+27. KubeCtl Usage best practices
+https://kubernetes.io/docs/reference/kubectl/conventions/#best-practices
+kubectl run test --image nginx --port 80 --expose --dry-run
+kubectl run test --image nginx --port 80 --restart OnFailure --dry-run
+kubectl run test --image nginx --port 80 --restart Never --dry-run
+kubectl run test --image nginx --port 80 --schedule "*/1 * * * *" --dry-run
