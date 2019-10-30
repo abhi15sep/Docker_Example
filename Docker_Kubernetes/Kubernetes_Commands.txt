@@ -1,0 +1,2 @@
+1. kubectl get pods
+2. kubectl get services
