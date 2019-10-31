@@ -42,3 +42,7 @@ kubectl set image deployment/client-deployment client=stephengrider/multi-client
 
 11. To connect local docker client with Kubernetes VM docker server
 eval $(minikube docker-env)
+
+12. To go inside a container
+kubectl get pods
+kubectl exec -it client-deployment-5776cb475-tdh5l sh
