@@ -32,3 +32,13 @@ microk8s.inspect: Performs a quick inspection of the MicroK8s intallation
 microk8s.reset: Resets the infrastructure to a clean state
 microk8s.stop: Stops all kubernetes services
 microk8s.start: Starts MicroK8s after it is being stopped
+
+9. To get microk8s public proxy ip.
+microk8s.config
+
+10. To update a image of running container within a pod
+kubectl set image <Object_Type>/<Object_Name> <Container_Name>=<image_to_Use>
+kubectl set image deployment/client-deployment client=stephengrider/multi-client:v5
+
+11. To connect local docker client with Kubernetes VM docker server
+eval $(minikube docker-env)
