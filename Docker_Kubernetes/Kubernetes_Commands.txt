@@ -1,2 +1,34 @@
+Ubuntu Machine Setup: https://gist.github.com/gonzaloplaza/f62fdcfdb6aac3d15a0fe0d750715729
 1. kubectl get pods
 2. kubectl get services
+3. Enable addons
+microk8s.enable dashboard dns
+4. Accessing the Kubernetes and grafana dashboards
+microk8s.kubectl get all --all-namespaces
+https://10.152.183.121/#/overview?namespace=default
+microk8s.config
+token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
+microk8s.kubectl -n kube-system describe secret $token
+
+5. cluster Info
+microk8s.kubectl cluster-info
+microk8s.config
+
+6. We start by creating a microbot deployment with two pods via the kubectl cli:
+microk8s.kubectl create deployment microbot --image=dontrebootme/microbot:v1
+microk8s.kubectl scale deployment microbot --replicas=2
+
+7. To expose our deployment we need to create a service:
+microk8s.kubectl expose deployment microbot --type=NodePort --port=80 --name=microbot-service
+
+8. Integrated commands
+microk8s.status: Provides an overview of the MicroK8s state (running / not running) as well as the set of enabled addons
+microk8s.enable: Enables an addon
+microk8s.disable: Disables an addon
+microk8s.kubectl: Interact with kubernetes
+microk8s.config: Shows the kubernetes config file
+microk8s.istioctl: Interact with the istio services; needs the istio addon to be enabled
+microk8s.inspect: Performs a quick inspection of the MicroK8s intallation
+microk8s.reset: Resets the infrastructure to a clean state
+microk8s.stop: Stops all kubernetes services
+microk8s.start: Starts MicroK8s after it is being stopped
