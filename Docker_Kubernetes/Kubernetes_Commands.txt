@@ -59,3 +59,17 @@ kubectl create secret generic/tls/docker-registry <secret_name> --from-literal  
 kubectl create secret generic pgpassword --from-literal  PGPASSWORD=dsaasfdsfe57$&
 To verify secrets created
 kubectl get secrets
+
+15. Used this Ingress-nginx project
+https://github.com/kubernetes/ingress-nginx
+https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingress-system.html
+
+16. Setting up Ingress in Google Cloud
+A. Make sure you executed the mandatory generic script
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml
+B. Execute the provider specific script to enable the service:
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
+C. Verify the service was enabled by running the following:
+kubectl get svc -n ingress-nginx
+kubectl apply -f k8s
+kubectl.config - Try the IP in browser
