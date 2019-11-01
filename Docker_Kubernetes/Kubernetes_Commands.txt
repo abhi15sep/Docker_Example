@@ -46,3 +46,16 @@ eval $(minikube docker-env)
 12. To go inside a container
 kubectl get pods
 kubectl exec -it client-deployment-5776cb475-tdh5l sh
+
+13. Options available to create storageclass (Provisioners).
+kubectl get storageclass
+kubectl describe storageclass
+https://kubernetes.io/docs/concepts/storage/storage-classes/
+kubectl get pv
+kubectl get pvc
+
+14. To create a Secret in Kubernetes
+kubectl create secret generic/tls/docker-registry <secret_name> --from-literal  key=value
+kubectl create secret generic pgpassword --from-literal  PGPASSWORD=dsaasfdsfe57$&
+To verify secrets created
+kubectl get secrets
