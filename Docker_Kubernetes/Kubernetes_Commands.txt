@@ -78,3 +78,15 @@ kubectl.config - Try the IP in browser
 git remote -v
 git remote remove origin
 git remote add origin <git link>
+
+18. Kubernetes 3rd party package manager
+https://github.com/helm/helm
+https://helm.sh/docs/using_helm/#quickstart-guide
+
+19. Create a new service account called tiller in the kube-system namespaces.
+kubectl create serviceaccount --namespace kube-system tiller
+create a new clusterrolebinding with the role "cluster-admin" and assign it to service account 'tiller'
+kubectl create clusterrolebinding tiller-cluster-role --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+helm init --service-account tiller --upgrade
+If the kubernetes cluster has RBAC enabled, then run:
+helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
